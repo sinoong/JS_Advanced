@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RealJavascript</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <!-- type="module"의 의미를 알아보자. -->
+    <script src="/src/greet.js"></script>
+    <!-- ie를 제외한 요즘 브라우저들은 ESM을 지원한다. -->
+    <!-- ESM 모듈을 사용하기 위해서는 type="module" 을 적용해 주면 된다. -->
+    <!-- 그러면 해당 파일인 독자적인 모듈 스코프를 갖게 된다. -->
+    <script src="/src/greet.js" type="module"></script>
+    <script src="/src/index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": true,
+        "regenerator": true
+      }
+    ]
+  ],
+  "parserOpts": {
+    "plugins": [
+      "dynamicImport"
+    ]
+  }
+}
