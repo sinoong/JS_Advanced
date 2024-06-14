@@ -4,6 +4,7 @@
 {
 
   let a = 10;
+  let b = 10
   a += 5;
   a = a + 5;
   a -= 1;
@@ -13,4 +14,7 @@
   a /= 2;
   a %= 3;
   a **= 2;
+  b **= 3
+  console.log({ a });
+  console.log(b)
 }

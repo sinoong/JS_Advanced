@@ -13,7 +13,7 @@
   console.log(x > 0 && (y > 0 || z > 0));
   console.log(x > 0 && (y < 0 || z < 0));
 
-  // 단축평가
+  // 단축평가 (앞에서 판단 끝)
   console.log(x < 0 && (y > 0 || z > 0));
   console.log(x > 0 || (y > 0 || z > 0));
 }

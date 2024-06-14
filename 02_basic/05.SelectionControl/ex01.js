@@ -24,7 +24,7 @@
   if (grade >= 90) {
     console.log('A 학점');
   } else if (grade >= 80) {
-    consooe.log('B 학점');
+    console.log('B 학점');
   } else if (grade >= 70) {
     console.log('C 학점');
   } else {
