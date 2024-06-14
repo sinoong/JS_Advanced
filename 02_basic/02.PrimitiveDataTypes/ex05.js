@@ -2,9 +2,9 @@
  * 문자열, string
  */
 {
-  console.log('abed'.length);
-  let name = 'CodingMax';
-  let char = 'A';
+  console.log("abed".length);
+  let name = "CodingMax";
+  let char = "A";
   let char2 = "A";
 
   let firstIndex = 0;
@@ -30,13 +30,13 @@
 {
   let message = "He said: 'My name is Jim'";
   console.log(message);
-  let message2 = 'He said: "My name is Jim"'
+  let message2 = 'He said: "My name is Jim"';
   console.log(message2);
-  let greeting = 'Hello\nWorld';
+  let greeting = "Hello\nWorld";
   console.log(greeting);
-  let tab = 'Hello\tWorld'
+  let tab = "Hello\tWorld";
   console.log(tab);
-  console.log(String.raw`Hello\nworld`);
+  console.log(String.raw`Hello\nworld`); // 이스케이프 구문까지 다 나옴
   const msg = `안녕하세요!
 오늘은 날씨가 좋네요~
 커피 한잔 어때요?`;
