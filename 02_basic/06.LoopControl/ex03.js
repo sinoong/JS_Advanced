@@ -1,5 +1,11 @@
 /**
- * for-in 루프
+ * for-in 루프 (key)
+ * for(const key in object) {
+ *  실행할 코드 블럭
+ * }
+ * 객체의 키를 순회할 때 사용
+ * 새로운 블록 범위를 생성하기 때문에 key가 매번 생긴다
+ * 그래서 const 사용 가능 
  */
 {
   const person = {

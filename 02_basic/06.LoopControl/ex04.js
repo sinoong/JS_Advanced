@@ -1,5 +1,8 @@
 /**
- * for of 문
+ * for of 문 (value)
+ * for (const value of iterable) {
+ *  // 실행할 코드 블럭
+ * }
  */
 {
   const chars = ['a', 'b', 'c', 'd'];

@@ -44,14 +44,16 @@
 }
 
 {
+  // do 최소한 1번 실행한다 
   do {
     console.log('안녕하세요')
   } while (false);
 }
 
 {
+  // 활용 사례 
   let success = false;
-  let retryCount = 0;
+  let retryCount = 0; // api 요청 
   do {
     success = requestAPI();
     if (!success) {
