@@ -16,6 +16,7 @@
 
 /**
  * 각 진수간의 변환에는 number 타입의 toString() 메서드를 사용할 수 있다.
+ * Number.prototype.toString()  => 몇진수를 쓸건지 
  */
 {
   // 10진수로 변환
