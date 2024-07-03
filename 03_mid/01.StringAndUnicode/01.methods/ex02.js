@@ -10,7 +10,7 @@
                
   const msg = '01234567890';
   // msg.substring(startIndex, endIndex);
-  console.log(msg.substring(0, 5));
+  console.log(msg.substring(0, 5)); // 이상 미만
 
   // endIndex를 생략할 수 있다.
   console.log(msg.substring(6));

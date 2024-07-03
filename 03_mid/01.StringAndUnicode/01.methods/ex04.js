@@ -6,7 +6,7 @@
 
 {
   const msg = 'Hello World';
-  console.log(msg.replace('World', 'Korea'));
+  console.log(msg.replace('World', 'Korea')); // World를 Korea로 
 
   // 정규표현식을 사용할 수 있다.
   const email = 'jun@codingmax.net';

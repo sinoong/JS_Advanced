@@ -11,6 +11,7 @@
   const msg = 'Hello World';
   //-> 제일 처음 일치하는 부분문자열의 시작 인덱스를 반환한다.
   console.log(msg.indexOf('World'));
+  console.log(msg.indexOf('World', 7)); // 시작점을 7로 해서 World 찾으니까 없으니 -1
   console.log(msg.indexOf('o'));
 
   //-> 제일 마지막에 일치하는 부분문자열의 시작 인덱스를 반환한다.
@@ -27,10 +28,10 @@
  */
 {
   const msg = 'Hello World';
-  console.log(msg.startsWith('He'));
+  console.log(msg.startsWith('He')); // true
 
   // 뒤에 position에 인덱스값을 주면 검사를 시작할 위치를 설정할 수 있다.
-  console.log(msg.startsWith('Wo', 6));
+  console.log(msg.startsWith('Wo', 6)); // true
 }
 
 /**
