@@ -111,6 +111,6 @@
  */
 {
   
-  encodeURIComponent('\uD83C'); // 오류발생
+  // encodeURIComponent('\uD83C'); // 오류발생
   encodeURIComponent('\uD83C\uDF0E');
 }

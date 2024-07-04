@@ -13,4 +13,5 @@
   console.log(components.join(','));
   console.log(components.join('-'));
   console.log(components.join(' '));
+  console.log(msg.split('').join(''))
 }
