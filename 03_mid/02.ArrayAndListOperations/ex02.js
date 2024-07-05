@@ -27,7 +27,7 @@
  */
 {
   const chars = Array.from('abcde');
-  // 주의할 점은 keys 반환값은 배열이 아니라 iterator라는 것이다.
+  // 주의할 점은 keys 반환값은 배열이 아니라 iterator라는 것이다. => key === index
   const iterator = chars.keys();
   // 따라서 iterator를 순회할 수 있는 for...of 루프를 사용해야 한다.
   for (const key of iterator) {

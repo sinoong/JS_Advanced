@@ -15,7 +15,7 @@
  * Array.of() 는 여러 인자 목록에서 배열을 생성하는 정적 메서드다,
  */
 {
-  console.log(Array.of(1, 2, 3, 4));
+  console.log(Array.of(1, 2, 3, 4)); // 배열 생성 
 
   const address = Array.of(
     '대한민국',
@@ -160,6 +160,11 @@
     .map(String.fromCharCode);
   console.log(alphabet);
 }
+{
+  // Array.from으로 감쌀 필요 없이 바로 range() 함수의 결과에 map 적용하면 더 좋다.
+  const alphabet = range('a'.charCodeAt(0), 'z'.charCodeAt(0)).map(String.fromCharCode)
+  console.log(alphabet)
+}
 
 /**
  * 참고로 배열은 Array.isArray 정적 메서드로 
@@ -171,6 +176,6 @@
   console.log(typeof numbers);
   console.log(Array.isArray(numbers));
 
-  // ArrayLike 객체는 false가 된다.
+  // ArrayLike 객체는 false가 된다. (ArrayLike 객체는 배열이 아님)
   console.log(Array.isArray({ length: 5 }));
 }
