@@ -88,6 +88,7 @@
   const source = Array.from({ length: 5 }, (_, index) => index + 1);
   // toSpliced를 사용하면 source를 복사해서 사용하기 때문에 
   // 같은 source로 부터 다양한 splice연산을 할 수 있다.
+  // (n번째 원소부터, n개 삭제, 추가)
 
   // 첫번째 원소 삭제
   console.log(source.toSpliced(0, 1));
@@ -104,7 +105,7 @@
 
 /**
  * with(index, value)
- * 원본 배열에서 index 위치에 있는 값을 value로 변경한
+ * 원본 배열을 복사해서 index 위치에 있는 값을 value로 변경한
  * 새로운 배열을 반환한다.
  */
 {

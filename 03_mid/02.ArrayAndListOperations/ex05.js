@@ -13,8 +13,8 @@
 
   // end 없이 사용하면 start부터 배열 끝까지 복사하여
   // target 위치에 덮어 쓴다.
-  numbers.copyWithin(0, 1);
-  console.log(numbers);
+  numbers.copyWithin(0, 1); // 1번 인덱스값이 0번 위치부터 복사되어 덮어씀
+  console.log(numbers); // 2, 3, 4, 5, 5
 }
 {
   const numbers = Array.of(1, 2, 3, 4, 5);
@@ -24,7 +24,7 @@
   // numbers 배열에서 0..<3 인덱스 아이템을 복사하여
   // 인덱스 1에 복사한다. 추가가 아니라 복사라서 덮어쓴다.
   numbers.copyWithin(1, 0, 3);
-  console.log(numbers);
+  console.log(numbers); // 1, 1, 2, 3, 5
 }
 
 {
@@ -34,7 +34,7 @@
   // 배열의 끝에서 - 3만큼 이동한 다음 
   // 그 위치에서 배열 끝까지 복사하여 target 위치에 쓴다.
   numbers.copyWithin(0, -3);
-  console.log(numbers);
+  console.log(numbers); // 3, 4, 5, 4, 5
 }
 
 {
@@ -43,8 +43,8 @@
   // start에 음수 인덱스를 -3을 주고 end에 음수 -1을 주면 
   // 배열의 끝에서 -3만큼 이동한 다음 
   // 그 위치에서 끝에서부터 |-3| - |-1|개를 복사하여 target 위치에 쓴다.
-  numbers.copyWithin(0, -3, -1);
-  console.log(numbers);
+  numbers.copyWithin(0, -3, -1); // -3 이상 -1 미만
+  console.log(numbers); // 3, 4, 3, 4, 5
 }
 
 /**
@@ -87,8 +87,8 @@
  */
 {
   const numbers = [1, 2, [3, [4, 5, [6, [7]]]]];
-  console.log(numbers.flat());
-  console.log(numbers.flat(2));
+  console.log(numbers.flat()); // 깊이 1개 평탄화 1, 2, 3 []
+  console.log(numbers.flat(2)); // 깊이 2개 평탄화 1, 2, 3, 4, 5, []
   console.log(numbers.flat(3));
   console.log(numbers.flat(4));
 }
@@ -100,7 +100,7 @@
  */
 {
   const numbers = Array.of(4, 2, 3, 1, 5);
-  numbers.reverse();
+  numbers.reverse(); // 배열 자체를 바꿈 
   console.log(numbers);
 
   // 복사하여 역순하려면 slice 메서드와 같이 사용하면 된다.
@@ -109,7 +109,7 @@
 
 /**
  * sort([compareFunction])
- * 배열의 요소들을 오름차순이나 내림차순으로 정렬한다.
+ * 배열의 요소들을 오름차순이나 내림차순으로 정렬한다. 배열 자체를 바꿈 
  * compareFunction 가 주어지면 compareFunction 반환값에 따라
  * 오름차순이나 내림차순으로 정렬한다.
  * compareFunction는 
@@ -123,6 +123,10 @@
   const numbers = Array.of(4, 2, 3, 1, 5);
   // 오름차순
   console.log(numbers.slice().sort());
+  // 내림차순(오름차순 정렬 후 역순)
+  console.log(numbers.slice().sort().reverse())
+
+  // compareFunction을 활용한 오름차순 내림차순 정렬하기 
   // 오름차순
   console.log(numbers.slice().sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)));
   // 내림차순

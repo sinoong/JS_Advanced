@@ -11,6 +11,7 @@
   const doubled = Array.of(1, 2, 3, 4, 5)
     .map((n) => n * 2);
   console.log(doubled);
+  console.log(Array.of(1, 2, 3, 4, 5).map((n) => `${n}`)) // "1", "2", "3", "4", "5" -> 문자열로 변경 
 }
 
 {
@@ -66,27 +67,27 @@
 }
 
 {
-  // 문자열로 누산해 보자
-  const result = Array.of(1, 2, 3, 4, 5)
-    .reduce((acc, value) => `${acc}${value}`, '');
-  console.log(result);
-}
-
-{
   // 최대값을 구해보자
   // 초기값이 없으면 source 배열의 첫번째 원소가 초기값이 된다.
   const result = Array.of(1, 2, 3, 4, 5)
-    .reduce((max, value) => Math.max(max, value));
-  console.log(result);
+  .reduce((max, value) => Math.max(max, value));
+  console.log(result); 
+}
+
+{
+  // 문자열로 누산해 보자
+  const result = Array.of(1, 2, 3, 4, 5)
+    .reduce((acc, value) => `${acc}${value}`, '');
+  console.log(result); // 12345
 }
 
 /**
- * reduceRight
+ * reduceRight -> 반대방향으로 누적하는 것 
  * 배열의 요소를 오른쪽에서 왼쪽으로 줄여나가며 연산을 수행한다.
  * reduce 메소드와는 반대 방향으로 누산하는 것이다.
  */
 {
   const result = Array.of(1, 2, 3, 4, 5)
     .reduceRight((acc, value) => `${acc}${value}`, '');
-  console.log(result);
+  console.log(result); // 54321
 }

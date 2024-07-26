@@ -11,7 +11,8 @@
 
 /**
  * find
- * - find 메소드는 배열에서 주어진 조건을 만족하는 첫 번째 원소를 반환하는 메소드
+ * - find 메소드는 배열에서 주어진 조건을 만족하는 
+ * - 첫 번째 원소를 반환하는 메소드
  */
 {
   const numbers = Array.of(1, 2, 3, 4, 5);
@@ -75,7 +76,7 @@
  */
 {
   const numbers = Array.of(1, 2, 3, 4, 5, 1, 2, 3, 4, 5);
-  console.log(numbers.indexOf(3));
+  console.log(numbers.indexOf(3)); // 2
   console.log(numbers.indexOf(10) < 0 ? '10이 없습니다' : '10이 있습니다.');
 
   // 값타입 일치 연산자를 사용하기 때문에 객체 비교는 메모리 주소를 비교한다.
@@ -118,7 +119,7 @@
 {
   // 첫번째 홀수 인덱스 찾기
   const numbers = Array.of(1, 2, 3, 4, 5, 1, 2, 3, 4, 5);
-  console.log(numbers.findLastIndex((number) => number % 2 === 1));
+  console.log(numbers.findLastIndex((number) => number % 2 === 1)); // 9
 
   // 조건에 맞는 원소가 없으면 -1이 반환된다.
   console.log(numbers.findLastIndex((number) => number > 10));
